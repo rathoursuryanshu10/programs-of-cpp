@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	char str[1000];
+	int freq[26]={0,0},i,loc;
+	puts("Enter the sttring : ");
+	gets(str);
+	i=0;
+	while(str[i]!='\0')
+	{
+		freq[str[i]-'a']++;
+		i++;
+	}
+	int max=freq[0];
+	for(int j=1;j<26;j++)
+	{
+		if(max<freq[j])
+		{
+			max=freq[j];
+			loc=j;
+		}
+	}
+	cout<<"Frequency of " <<char(97+loc) <<" is " <<max;
+	return 0;
+}
