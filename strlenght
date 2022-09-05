@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	char name[30];
+	int i=0;
+	cout<<"Enter the name:: ";
+	cin>>name;
+	while(name[i]!=NULL)
+	{
+		i++;
+	}
+	cout<<"The lenght of " <<name <<"= " <<i;
+	return 0;
+}
