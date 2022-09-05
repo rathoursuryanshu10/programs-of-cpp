@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	char name[]= "Acropolis";
+	char N[20]="Suryansh Rathour";
+	char na[]={'S','u','r','y'};
+	cout<<"Name:: "<<name <<endl;
+	cout<<"Name:: "<<N <<endl;
+	cout<<"Name:: "<<na <<endl;
+	return 0;
+}
