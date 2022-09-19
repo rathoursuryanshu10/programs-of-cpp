@@ -1,0 +1,81 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+class saving_account{
+ private:
+  string name;
+  string id;
+  double bal;
+  double amount,dr,cr;
+  public:
+   void debit()
+   {
+    cout<<"Enter the amount to debit: " <<endl;
+    cin>>dr;
+    if(amount>=dr)
+    {
+     bal=amount-dr;
+     cout<<"The main balance : " << bal <<endl;
+    }
+    else
+    cout<<"you have insufficient amount " <<endl;
+     
+     }
+   void credit()
+   {
+    cout<<"Enter the amount to credit: " <<endl;
+    cin>>cr;
+    bal=amount+cr;
+    cout<<"The main balance: " <<bal <<endl;
+   }
+   
+   void getdata()
+   {
+    cout<<"Enter your name: " <<endl;
+    getline(cin,name);
+    cout<<"Enter your id : " ;
+    cin>>id;
+    cout<<"enter your balance amount: " <<endl;
+    cin>>amount;
+   }
+   void setdata()
+   {
+    cout<<"Account Holder's name: "<<name <<endl;
+    cout<<"Your Account no.: " <<id <<endl;
+   
+    cout<<"Your balance : " <<bal <<endl;
+   
+   }
+  };
+int main()
+{
+ char ch;
+ saving_account sa;
+  sa.getdata();
+
+ cout<<"Enter the function to do 1 :: Debit 2:: credit 3::Exit : ";
+ cin>>ch;
+ switch (ch)
+ {
+  case '1':
+   sa.debit();
+   sa.setdata();
+
+    cout<<"Enter the function to do 1 :: Debit 2:: credit 3::Exit : ";
+ cin>>ch;
+  case '2':
+  //sa.getdata();
+   sa.credit();
+    sa.setdata();
+
+     cout<<"Enter the function to do 1 :: Debit 2:: credit 3::Exit : ";
+ cin>>ch;
+  case '3':
+  cout<<"Have a Nice! day ";
+  exit(0);
+
+  default:
+   cout<<"You have entered wrong input";
+   }
+ return 0;
+}
